@@ -37,6 +37,6 @@
 
    </div>
 
-   <p class="credit"> &copy; copyright  @ <?php echo date('Y'); ?> by <span>Le Van Luc/ Vo Van Thinh/ Phung Thi To Trinh </span> </p>
+   <p class="credit"> &copy; Bản quyền  @ <?php echo date('Y'); ?> by <span>Le Van Luc/ Vo Van Thinh/ Phung Thi To Trinh </span> </p>
 
 </section>
