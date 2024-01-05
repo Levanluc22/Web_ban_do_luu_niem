@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 03, 2023 lúc 04:58 PM
--- Phiên bản máy phục vụ: 10.4.28-MariaDB
--- Phiên bản PHP: 8.2.4
+-- Máy chủ: 127.0.0.1:3306
+-- Thời gian đã tạo: Th1 05, 2024 lúc 07:28 AM
+-- Phiên bản máy phục vụ: 10.4.32-MariaDB
+-- Phiên bản PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `book_store_website_db`
+-- Cơ sở dữ liệu: `tltgift_db`
 --
 
 -- --------------------------------------------------------
@@ -84,6 +84,26 @@ CREATE TABLE `products` (
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `price`, `image`) VALUES
+(2, 'USB thẻ quảng cáo', 6, 'usbthequangcao.jpg'),
+(3, 'USB thẻ', 7, 'usbthe.jpg'),
+(4, 'USB gỗ khắc logo', 8, 'usbgokhaclogo.jpg'),
+(5, 'USB gỗ cao cấp', 10, 'usbgocaocap.jpg'),
+(6, 'Lót ly theo yêu cầu', 3, 'lot-ly-theo-yeu-cau.png'),
+(7, 'Smart Wireless Mini', 15, 'smartwirelessmini.jpg'),
+(8, 'Cốc nến thơm', 6, 'coc-nen-thom.jpg'),
+(9, 'Đèn xông tinh dầu ', 15, 'den-xong-tinh-dau.jpg'),
+(10, 'Bút gỗ cao cấp', 5, 'butgocaocap.jpg'),
+(11, 'Đồng hồ led in logo', 11, 'dongholedinlogo.jpg'),
+(12, 'Đèn xông tinh dầu sứ', 7, 'den-xong-tinh-dau-su.png'),
+(13, 'Bút parket cao cấp', 3, 'butparkercaocap.jpg'),
+(14, 'Máy tạo oxy y tế', 20, 'maytaooxyytehidgeemplus.jpg'),
+(15, 'Đồng hồ gỗ đa giác', 4, 'donghogodagiac.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -97,6 +117,15 @@ CREATE TABLE `users` (
   `password` varchar(100) NOT NULL,
   `user_type` varchar(20) NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `user_type`) VALUES
+(1, 'Người quản trị 1', 'quantri1@gmail.com', '3e31b652b540cb516d35341453e8bce0', 'admin'),
+(2, 'Người dùng 1', 'nguoidung1@gmail.com', '847dc5e54b045f160fdeeee8369f3dc3', 'user'),
+(3, 'Quản lí 2', 'quanli2@gmail.com', '3a1086d25cd28bd2bdaa20f9f05a9280', 'admin');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -158,13 +187,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
