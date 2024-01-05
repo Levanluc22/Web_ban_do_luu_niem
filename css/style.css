@@ -40,7 +40,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-   background-color: var(--gotrang);
+   background-color: var(--pink);
 }
 
 html{
@@ -894,7 +894,7 @@ section{
 
 /*Bắt đầu phần chân*/
 .footer{
-   background-color: var(--gotrang);
+   background-color: var(--pink);
 }
 
 .footer .box-container{
